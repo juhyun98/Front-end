@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      /* 
+          선택자
+          1) 의미 : 특정 태그를 지칭하는 방법
+          2) 종류 : 전체, 태그, 아이디, 클래스, 계층
+          3) 우선순위 : 범위가 좁을수록 우선순위가 올라간다.
+
+          [전체선택자]
+           - 화면에 만든 모든 태그에게 접근할 때 활용한다.
+           - * 기호로 표시한다. (나는 애스터리스크야)
+
+          [태그선택자]
+           - 특정 태그만 접근할 때 활용한다.
+           - 태그의 이름으로 표시한다.
+
+          [클래스선택자]
+           - 태그들에게 특정 그룹을 만들 때 활용한다.
+           - .클래스명으로 표시한다.
+           - 사용처 : 반복되는 스타일을 묶어서 관리할 때 활용한다.
+
+          [아이디선택자]
+           - 특정 태그에게 부여하는 고유한 값 -> 중복이 안되는 값
+           - #아이디값으로 표시한다.
+           - 사용처 : 고유한 영역을 만들 때 활용한다.
+      */
+
+      * {
+          color: red;
+      }
+      h1 {
+          color: blue;
+      }
+      .yellow {
+        color: yellow;
+      }
+      h1.yellow{
+        font-size: 20px;
+      }
+      #header {
+        color: black;
+      }
+
+  </style>
+</head>
+<body>
+    <h1>문서의 제목입니다.</h1>
+    <h1 class="yellow">문서의 제목입니다.</h1>
+    <h1 class="yellow" id="header">문서의 제목입니다.</h1>
+    <h2 class="yellow">문서의 소제목입니다.</h2>
+    <h2>문서의 소제목입니다.</h2>
+</body>
+</html>

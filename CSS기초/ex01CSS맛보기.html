@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      :root {
+        --bg: hsl(210, 24%, 93%);
+        --text: hsl(210 32% 12%);
+        --muted: hsl(210 10% 45%);
+        --primary: hsl(200 90% 45%);
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, "Noto Sans KR", sans-serif;
+        color: var(--text);
+        background: var(--bg);
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+      }
+      h1 {
+        margin: 0 0 0.5rem 0;
+      }
+      .desc {
+        color: var(--muted);
+        margin: 0 0 1.5rem 0;
+      }
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        margin-bottom: 1rem;
+      }
+      code {
+        background: hsl(210 20% 93%);
+        padding: 0.1rem 0.35rem;
+        border-radius: 4px;
+      }
+      .tip {
+        border-left: 4px solid var(--primary);
+        padding-left: 0.75rem;
+      }
+
+      /* [현업 포인트]
+       - CSS는 '표현' 전담. HTML은 '의미/구조', JS는 '행동/데이터'.
+       - 역할 분리(Separation of Concerns)를 지키면, 유지보수 비용이 급감합니다.
+    */
+    </style>
+</head>
+<body>
+    <main class="wrap">
+      <h1>CSS의 역할과 필요성</h1>
+      <p class="desc">
+        HTML이 '뼈대', CSS는 '피부/의상', JS는 '근육/행동'이라고 이해하면
+        직관적입니다.
+      </p>
+
+      <section class="card">
+        <h2>왜 CSS가 필요한가?</h2>
+        <ul>
+          <li>브랜드 아이덴티티(색/폰트/간격) 일관성 유지</li>
+          <li>접근성(가독성·대비·포커스 표시) 향상</li>
+          <li>반응형 레이아웃로 다양한 기기 대응</li>
+        </ul>
+      </section>
+
+      <section class="card tip">
+        <strong>현업 팁</strong>
+        <p>
+          HTML에 <code>style=""</code>을 남발하면 확장/수정이 지옥이 됩니다.
+          항상 “공통 규칙은 CSS에 모은다”를 기본 원칙으로 잡으세요.
+        </p>
+      </section>
+    </main>
+</body>
+</html>
