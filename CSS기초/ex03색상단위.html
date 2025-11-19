@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      /* 페이지 공통 스타일링 */
+      body {
+          background-color: #f4f4f4;
+      }
+
+      .box {
+          width: 220px;
+          height: 100px;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+          /* 박스에 그림자 설정 */
+          margin: 10px;
+      }
+      
+      /* 1. 색상 이름 단위 */
+
+      .name{
+          background-color: tomato;
+          /* 장점 : 빠르게 색상을 부여할 수 있지만! 정확도가 낮다! */
+      }
+      .hex {
+          background-color: #2196f3;
+          /* 실무에서 가장 자주 많이 쓰이는 색상 표현 방식
+             디자인 시안 전달 시 주로 사용됨 */
+      }
+      .rgb {
+          background-color: rgb(76, 175, 80);
+          /* 계산, 변경이 용이하다! JS에서 동적으로 색을 바꿀 때 많이 사용 */
+      }
+      .rgba {
+           background-color: rgba(255, 191, 7, 0.2);
+           /* 투명 효과를 넣을 때 매우 자주 사용하는 방식
+              overlay 반투명 배경 덮기 등에 자주 활용~
+              배경이 반 투명이기 때문에 글씨 및 다른 요소들이 잘 들어날 수 있게 색상 변경이 필요
+           */
+      }
+      .hsl {
+          background-color: hsl(340, 82%, 52%);
+          /* 디자인 시스템에서 색상 톤 조절할 때 매우 유용
+             동일한 색상(hue)에서 채도명도만 조절, 일괄된 팔레트 만들기 가능
+             -- primary-color - hsl(210, 90%, 50%) - 기본 파랑
+          */
+      }
+      .hsla {
+          background-color: hsla(340, 82%, 52%, 0.2)
+      }
+
+      /* 전체적인 페이지 기본 설정
+      - 웹디자인 시 background-color 너무 어둡지 않게, 너무 새하얗지 않게
+      - 약간 톤다운된 회색(#f4f4f4) 자주 활용
+      - border-radius는 모서리를 둥글게 만들어 주어 UI를 좀 더 현대적으로 보이게 함!
+      - 버튼, 카드 box-shadow 살짝 떠 있는 느낌을 줄 때 자주 사용됨,
+      
+      */
+
+
+  </style>
+</head>
+<body>
+
+    <h1>CSS 색상 단위 완전 이해하기</h1>
+    <!-- css에서 색상을 나타낼 수 있는 단위들에 대해 알아보자!! -->
+
+    <div class="class-box">
+        <div class="box name">이름 - tomato</div>
+        <div class="box hex">HEX - #2196f3</div>
+        <div class="box rgb">RGB(76, 175, 80)</div>
+        <div class="box rgba">RGBA(255, 191, 7, 0.2)</div>
+        <div class="box hsl">HSL - hsl(340- 색상, 82%(채도), 52%(명도))</div>
+        <div class="box hsla">HSLA - hsla(340- 색상, 82%(채도), 52%(명도), 0.2)</div>
+      
+      
+      
+    </div>
+
+
+</body>
+</html>
