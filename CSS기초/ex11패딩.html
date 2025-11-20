@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      /* 
+          padding : 테두리를 기준으로 테두리와 컨텐츠 사이의 여백을 담당하는 공간
+          1) 사용법 : margin과 똑같다.
+             - 단! auto가 없다.
+          2) 주의점 : 위치는 그대로 유지하지만, 전체 크기가 증가 
+             - box-sizing : border-box -> 원래 크기를 유지하기 위해서 padding + border + content크기를 계산
+          3) 사용처 : 하나의 영역 안에서 컨텐츠를 밀어 넣을 때 활용한다
+             - 글자는 영역의 끝에서 시작하기 때문에 가운데로 넣어줘야 시각적으로 효과가 있다.
+      */
+      .box{
+          width: 200px;
+          height: 200px;
+      }
+      .bgred {
+          background-color: red;
+          padding: 50px;
+          box-sizing: border-box;
+      }
+      .bggreen {
+          background-color: green;
+          margin: 100px;
+      }
+      .bgyellow {
+          background-color: yellow;
+      }
+
+  </style>
+</head>
+<body>
+    <div class="box bgred"></div>
+    <div class="box bggreen"></div>
+    <div class="box bgyellow"></div>
+</body>
+</html>
