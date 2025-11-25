@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>예제로 보는 박스모델 (수정: padding 시각화)</title>
+    <style>
+      /* ---------------------------------------
+     content → padding → border → margin
+     padding 영역을 연한 파랑, content는 흰색으로 분리
+     --------------------------------------- */
+      body {
+        font-family: "Noto Sans KR", Arial, sans-serif;
+        background-color: #ffffff;
+        margin: 40px;
+        line-height: 1.6;
+      }
+
+      h1 {
+        color: #0ea5e9;
+        margin-bottom: 16px;
+      }
+
+      ol {
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        padding: 16px 24px;
+        border-radius: 8px;
+      }
+
+      /* 바깥 margin 시각화: 박스 바깥을 분홍 배경으로 깔기 */
+      .stage {
+        position: relative;
+        width: max(340px, 42vw);
+        margin: 60px auto 32px;
+      }
+      .stage::before {
+        content: "";
+        position: absolute;
+        inset: -40px; /* 박스 주변 40px을 margin 시각화로 사용 */
+        background: #ffe2e2; /* margin 색 */
+        border-radius: 14px;
+        z-index: 0;
+      }
+
+      /* 실제 박스: padding과 border를 가짐 */
+      .diagram {
+        position: relative;
+        z-index: 1;
+        /* padding 영역을 '연한 파랑'으로 칠함 */
+        background: #bfdbfe; /* padding 색상(내부 여백) */
+        border: 10px solid #3b82f6; /* border */
+        border-radius: 8px;
+        padding: 30px; /* padding 두께 */
+        box-sizing: content-box; /* content 크기를 기준으로 계산(시각화 용도) */
+        text-align: center;
+      }
+
+      /* content 영역: 흰색 박스(가장 안쪽) */
+      .content-area {
+        background: #ffffff;
+        color: #1e3a8a;
+        font-weight: 800;
+        padding: 18px 24px; /* 텍스트 읽기 좋게 소량의 내부 여백 */
+        border-radius: 6px;
+      }
+
+      /* 라벨들 */
+      .label-margin {
+        position: absolute;
+        top: -34px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #ef4444;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .label-border {
+        position: absolute;
+        bottom: -26px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #f97316;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .label-padding {
+        position: absolute;
+        /* 테두리 바로 안쪽(= padding 영역 안)에 고정 */
+        top: 6px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #2563eb;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .legend {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 24px;
+      }
+      .legend div {
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .c-margin {
+        background: #fecaca;
+      }
+      .c-border {
+        background: #93c5fd;
+      }
+      .c-padding {
+        background: #bfdbfe;
+      }
+      .c-content {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+      }
+
+      .tip {
+        margin-top: 28px;
+        padding: 16px;
+        border-radius: 8px;
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>예제로 보는 박스모델</h1>
+    <p>CSS에서 모든 박스는 다음 4단계로 이루어집니다:</p>
+    <ol>
+      <li><strong>content</strong> - 실제 내용이 들어가는 영역</li>
+      <li><strong>padding</strong> - 내용과 테두리 사이의 여백 (내부 여백)</li>
+      <li><strong>border</strong> - 테두리 선</li>
+      <li><strong>margin</strong> - 박스 바깥의 간격 (외부 여백)</li>
+    </ol>
+
+    <div class="stage">
+      <div class="label-margin">margin (바깥 여백)</div>
+
+      <div class="diagram">
+        <div class="label-padding">padding (내부 여백)</div>
+        <div class="content-area">content 영역</div>
+        <div class="label-border">border (테두리)</div>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="c-margin">margin</div>
+      <div class="c-border">border</div>
+      <div class="c-padding">padding</div>
+      <div class="c-content">content</div>
+    </div>
+
+    <div class="tip">
+      <strong>💡 현업 포인트</strong>
+      <ul>
+        <li>
+          <code>padding</code>은 텍스트가 박스 안벽에 붙지 않게 “숨 쉴 공간”을
+          만드는 용도.
+        </li>
+        <li>
+          <code>margin</code>은 박스끼리 “떨어뜨리는” 용도. 두 박스 사이 간격을
+          일정하게 맞출 때 사용.
+        </li>
+        <li>
+          목업과 다르게 보이면 대개 <strong>padding/margin</strong> 값
+          문제입니다. 두 값을 먼저 확인하세요.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

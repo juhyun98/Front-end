@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> repeat / position / size </title>
+
+    <style>
+        .wrap {
+        max-width: 980px;
+        margin: 24px auto;
+        padding: 0 16px;
+        }
+        .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 16px;
+        }
+        .card {
+        height: 500px;
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+        overflow: hidden;
+        border: 1px solid #e5e7eb;
+        padding: 12px;
+        }
+        .demo {
+        height: 400px;
+        border-radius: 8px;
+        border: 1px dashed #cbd5e1;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYLoAGwMMtA2MQ9loqfB_9k02QJy84mypMTw&s");
+        }
+
+        .repeat{
+            /* 이미지가 "영역보다 작다면" 가로 세로 전부 반복 */
+            background-repeat: repeat;
+        }
+
+        .repeat-x{
+            background-repeat: repeat-x;
+        }
+
+        .no-repeat{
+            background-repeat: no-repeat;
+        }
+
+        .pos-center{
+            background-repeat: no-repeat;
+            background-position: center top;
+            /* background-position : 20px 10px */
+        }
+
+        /* 두 개의 카드에 CSS 입히기
+        1. 사진은 1장만 보이게 
+        2. 사진은 demo 영역 중앙에 위치할 것 
+        3. contain , cover 두개의 값 활용해보기
+        
+        */
+
+        .size-contain{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .size-cover{
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="wrap">
+        <!-- 여기에 row/card/demo 구조들을 차례대로 추가 
+        1. row : 한 줄 (행) 레이아웃을 담당
+        -> 그 안쪽에 가로 형태로 요소들을 배치한다!  
+        2. card : 하나의 데이터 덩어리 
+        3. demo : 실제 변화가 시각적으로 일어나는 공간 
+         -> 카드 안에서 디자인 효과만 확인하는 영역 
+         -> 실험 공간 
+        -->
+
+        <div class="row">
+            <div class="card">
+                <div class="demo repeat"></div>
+                <div class="label">repeat (기본값)</div>
+            </div>
+            <div class="card">
+                <div class="demo repeat-x"></div>
+                <div class="label">repeat-x 가로만 반복</div>
+            </div>
+        </div> 
+        <!-- 첫번째 줄 끝나는 영역 -->
+        <div class="row">
+            <div class="card">
+                <div class="demo no-repeat"></div>
+                <div class="label">no-repeat (반복 없음)</div>
+            </div>
+            <div class="card">
+                <div class="demo pos-center"></div>
+                <div class="label">position : center</div>
+            </div>
+        </div>
+        <!-- 두번째 줄 끝나는 영역 -->
+
+        <div class="row">
+            <div class="card">
+                <div class="demo size-contain"></div>
+                <div class="label"> size:contain(이미지 전체가 보이되, 빈 여백이 생김)</div>
+            </div>
+            <div class="card">
+                <div class="demo size-cover"></div>
+                <div class="label"> size:cover(이미지를 꽉 채우되 일부 잘릴 수 있다)</div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
