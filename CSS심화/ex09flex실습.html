@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 
+      flex : 홀리 그레일 레이아웃 실습
+      1). 홀리 그레일 레이아웃은 헤더, 사이드바(왼쪽), 메인 콘텐츠, 광고(오른쪽), 푸터로 구성된다
+      2). 상단과 하단에 헤더와 푸터가 존재한다
+      3). 메인 콘텐츠의 영역은 화면의 크기에 따라 사이즈가 달라진다.
+      4). 사이드바와 광고의 사이즈는 고정되어 있다.
+
+      container – 높이 500px; 너비 100%; 
+      header – 높이 1(비율);
+      side – 높이 3(비율); 너비 100px;
+      main –높이 3(비율); 너비 1(비율); 
+      ad - 높이 3(비율); 너비 100px; 
+      footer – 높이 1(비율);
+    */
+
+  div {
+    text-align: center;
+    border: 1px solid black;
+  }
+  .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 500px;
+  }
+  .header, .footer {
+        flex: 1;
+  }
+  .content {
+        display: flex;
+        flex: 3;
+  }
+  .side, .ad {
+        width: 100px;
+  }
+  .main {
+        flex: 1;
+  }
+
+
+</style>
+
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>header</h1>
+    </div>
+    <div class="content">
+      <div class="side">
+        <h1>side</h1>
+      </div>
+      <div class="main">
+        <h1>main</h1>
+      </div>
+      <div class="ad">
+        <h1>ad</h1>
+      </div>
+    </div>
+    <div class="footer">
+      <h1>footer</h1>
+    </div>
+  </div>
+
+</body>
+
+</html>
