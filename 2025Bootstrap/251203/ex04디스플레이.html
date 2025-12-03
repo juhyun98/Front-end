@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- 디스플레이 설정
+         : d-값
+         : block, inline-block, none, flex 
+    -->
+
+    <div class="container mt-4">
+        <!-- 기본 디스플레이 -->
+        <div class="d-blcok bg-primary text-light">블록 레벨 디스플레이</div>
+        <!-- 인라인블록 디스플레이
+             : 인라인처럼 한줄에 컨텐츠 영역만, 나란히 배치
+             : margin, padding, width, height 적용 시 block 형식처럼 적용됨 
+        -->
+        <div class="d-inline-block bg-success text-light p-2">인라인블록 레벨 디스플레이</div>
+        <div class="d-inline-block bg-success text-light">인라인블록 레벨 디스플레이</div>
+
+        <!-- 인라인 디스플레이 -->
+         <div class="d-inline bg-info">인라인 레벨 디스플레이</div>
+
+        <!-- 숨김 디스플레이 -->
+        <div class="d-none d-lg-block">숨김 레벨 디스플레이</div>
+        <!-- 디스플레이 + breakpoint 혼합 사용 가능
+             : 모바일 일때는 안보임
+             : 데스크톱 일때는, block 속성을 보임
+        -->
+
+        <!-- flex 디스플레이
+             (1) flex-fill : 플렉스 아이템들이 동일한 너비로 꽉 참
+             (2) gap-숫자 : 플렉스 아이템들간 간격을 설정
+        -->
+        <div class="d-flex bg-warning gap-2">
+            <div class="bg-danger">아이템1</div>
+            <div class="bg-primary">아이템2</div>
+            <div class="bg-success">아이템3</div>
+        </div>
+    </div>
+
+</body>
+</html>

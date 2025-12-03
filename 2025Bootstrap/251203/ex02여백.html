@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- 여백을 설정하는 방법
+             : m(방향)-숫자
+             : p(방향)-숫자
+             - 방향 : t, b, s, e (top, bottom, start, end)
+             - 숫자 : 0 ~ 5 (0px ~ 48px / 0rem ~ 3rem) 
+        -->
+
+        <div class="card mt-5" style="width: 300px;">
+            <div class="card-body">
+                <h5 class="card-title">카드 제목</h5>
+                <p class="card-text">카드 텍스트</p>
+            </div>
+        </div>
+
+        <!-- 텍스트 정렬
+             : text-정렬
+             : start, center, end 
+        -->
+        <div class="card mt-5" style="width: 300px;">
+            <div class="card-body p-4">
+                <h5 class="card-title mb-4">카드 제목</h5>
+                <p class="card-text text-end">카드 텍스트</p>
+            </div>
+        </div>
+
+        <!-- 그 외 정렬
+             1. 수직 정렬
+             : align-정렬 >> top, bottom, middle
+             2. flex 정렬 (1차원 정렬)
+             : justify-content-center (수평 정렬)
+             : align-items-center (수직 정렬)
+        -->
+
+    </div>
+
+</body>
+</html>
