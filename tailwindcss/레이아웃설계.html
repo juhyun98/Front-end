@@ -7,6 +7,85 @@
     <link rel="stylesheet" href="output.css">
 </head>
 <body>
-    
+
+    <!-- 
+        레이아웃의 가장 큰 3가지 영역
+        헤더영역 : <header>는 보통 사이트의 최상단 메뉴등을 제작
+        메인영역 : <main>은 사용자에게 제공할 컨텐츠를 담는 공간
+        풋터영역 : <footer>는 사이트의 설명, 정보제공 용으로 활용하는 공간
+    -->
+    <header class="bg-gray-200">
+        <nav class="flex justify-around items-center h-20">
+            <div>
+                <span class="text-3xl font-bold">BikeShop</span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <ul class="flex gap-4">
+                    <li><a href="#"></a>Home</li>
+                    <li><a href="#"></a>About</li>
+                    <li>Service</li>
+                    <li>Contact</li>
+                </ul>
+                <a href="#">
+                    <button class="bg-blue-300 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer">Login</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <main>
+        <div>
+            <img src="https://images2.giant-bicycles.com/b_white%2Cc_fill%2Ch_1000%2Cq_95%2Cw_1920/tcb8zjno7z9qbuivmzbv/PC_banner_.jpg" alt="">
+        </div>
+        <!-- 
+            Tip !
+            grid는 반복되는 카드 형태에서 가장 많이 사용
+            - 똑같이 수평정렬, 똑같이 수직정렬을 하는 경우가 많다.
+            - grid grid-cols-3 grid-rows-3 plcae-items-center
+        -->
+        <div class="grid grid-cols-3 place-items-center">
+            <div class="shadow-xl hover:shadow-2xl cursor-pointer">
+                <img class="w-lg" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTA3MTVfNTkg%2FMDAxNzUyNTY3NDk3NDY3.GhNLpH-YmKicyWEoQVJ1fZjRe209GznNUlQWhrAlHzog.buckcnQkYUwG8TJ205Fqsf8YecL6d7CK_NlhjGMYjuwg.JPEG%2F1000.jpg&type=a340" alt="">
+                <p class="font-bold">
+                    멋쟁이자전거 <br>
+                    \1,000,000
+                </p>
+            </div>
+            <div class="shadow-xl hover:shadow-2xl cursor-pointer">
+                <img class="w-lg" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTA3MTVfNTkg%2FMDAxNzUyNTY3NDk3NDY3.GhNLpH-YmKicyWEoQVJ1fZjRe209GznNUlQWhrAlHzog.buckcnQkYUwG8TJ205Fqsf8YecL6d7CK_NlhjGMYjuwg.JPEG%2F1000.jpg&type=a340" alt="">
+                <p class="font-bold">
+                    멋쟁이자전거 <br>
+                    \1,000,000
+                </p>
+
+            </div>
+            <div class="shadow-xl hover:shadow-2xl cursor-pointer">
+                <img class="w-lg" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNTEwMjBfNjMg%2FMDAxNzYwODg3MDg1ODUx.WpZ5YYAdEWzgdQPTCOuaNMpuhUu5HcMMajGJsjzqD5Ug.XYh9reA8yqSSqw2XWTaYmZ5W4U7on5ts1-cPmxscYVgg.PNG%2Fimage-removebg-preview_-_2025-10-20T001122.718.png&type=a340" alt="">
+                <p class="font-bold">
+                    멋쟁이자전거 <br>
+                    \1,000,000
+                </p>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <footer class="bg-blue-500">
+        <div class="flex justify-center items-center h-20">
+            <ul class="flex gap-4">
+                <li>회사소개</li>
+                <li>이용약관</li>
+                <li><strong>개인정보처리방침</strong></li>
+                <li>고객센터</li>
+            </ul>
+        </div>
+    </footer>
+        
+        
 </body>
 </html>
