@@ -5,206 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="output.css">
-
-    <style>
-        .box {
-            background-color: #272727;
-        }
-        #arrowbtn{
-            display: none;
-        }
-        .div {
-            display: none;
-        }
-        
-        #arrowbtn:checked + .div{
-            display: block;
-        }
-        #arrowbtn2{
-            display: none;
-        }
-        .div2 {
-            display: none;
-        }
-        
-        #arrowbtn2:checked + .div2{
-            display: block;
-        }
-        #arrowbtn3{
-            display: none;
-        }
-        .div3 {
-            display: none;
-        }
-        
-        #arrowbtn3:checked + .div3{
-            display: block;
-        }
-        .flex-box {
-            display: flex;
-            flex-direction: row;
-        }
-        .bgcolor {
-            background-color: #0f0f0f; 
-        }
-        .img{
-            margin:auto;
-            margin-bottom: 1.5rem;
-        }
-    </style>
 </head>
-<body class="bgcolor">
-    <div class="">
-        <!-- 배경 이미지 -->
-    <div class=" mx-auto px-50 py-50 bg-[url(https://www.gstatic.com/youtube/img/promos/growth/music_premium_lp2_header_background_dark_1440x578.webp)] bg-cover pt-25 pb-15">
-
-            <!-- 유튜브 로고 -->
-            <div class="flex justify-around">
-                <img style="width: 200px;" class="mt-5 mb-10 " src="https://www.gstatic.com/youtube/img/promos/growth/db55569cc2ba162998714b884befdf5bf6bbe745535d6ec67f329d2d694a366a_163x31.png" alt="">
-        </div>
-
-            <!-- 제목 -->
-            <h2 class="text-6xl mb-10 font-bold text-center text-gray-50"> Music Premium으로 Youtube Music을 즐기세요</h2>
-
-            <!-- 내용 1  -->
-            <p class="text-base p-3 mb-5 font-bold text-gray-50 text-center">₩0에 1개월 무료 체험 • 이후 ₩11,990⁠/⁠월 • VAT 포함 • 언제든지 취소 가능 </p>
-
-
-            <!-- 버튼  -->
-            <button style="cursor: pointer ;"
-            class="text-gray-100 bg-blue-500 rounded-full p-3 
-            font-bold m-5 block mx-auto
-            hover:scale-100 hover:bg-blue-600"> ₩0에 1개월 체험하기</button>
-
-            <!-- 내용 2 -->
-            <p class="text-xs mt-8 text-center font-medium text-gray-100">
-            무료 체험이 종료되기 전에 멤버십을 유지할지 확인해야 합니다. 확인할 때까지 요금이 청구되지 않습니다.
-            정기 결제이며 무료 체험판은 신규 회원에게만 제공됩니다.
-        </p>
-
-            <!-- 하이퍼링크 -->
-            <p class="text-center text-blue-500 font-bold text-xs">
-            <a class="" href="https://www.youtube.com/t/terms_paidservice?chromeless=1#premium">제한사항이 적용됩니다. </a>
-        </p>
-    </div>
-
-    <div class="mx-60">
-        <div class="text-stone-100 text-6xl font-black text-center mb-40 mt-10">1억 곡이 넘는 노래, 동영상, 라이브 공연을 간편하게</div>
-        <div class="grid grid-cols-3 place-items-center gap-5">
-            <div class="h-60 max-w-100 py-5">
-                <img class="img" src="https://www.gstatic.com/youtube/img/promos/growth/music_premium_lp2_small_feature_ad_free_static_dark_100x100.png" alt="">
-                <div class="text-xs text-white font-bold text-center h-3">좋아하는 음악을 광고로 끊김 없이 즐기세요</div>
-            </div>
-            <div class="h-60 max-w-100 py-5">
-                <img class="img" src="https://www.gstatic.com/youtube/img/promos/growth/music_premium_lp2_small_feature_background_play_dark_100x100.webp" alt="">
-                <div class="text-xs text-white font-bold text-center h-3">오프라인 저장하여 이동 중에 청취하고 백그라운드에서도 재생하는 등 끊김 없는 감상 환경을 즐기세요</div>
-            </div>
-            <div class="h-60 max-w-100 py-5">
-                <img class="img" src="https://www.gstatic.com/youtube/img/promos/growth/music_premium_lp2_small_feature_song_video_dark_100x100.webp" alt="">
-                <div class="text-xs text-white font-bold text-center h-3">노래를 듣는 중에 탭 한 번으로 오디오에서 동영상으로 전환하세요.</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="mx-auto px-6 max-w-7xl">
-
-        <!-- Section Title -->
-        <div class="flex justify-center py-14 text-center">
-            <span class="font-bold text-2xl text-white sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-                마음대로 즐기는 YouTube Music
-            </span>
-        </div>
-
-        <!-- First Row -->
-        <div class="flex flex-col md:flex-col lg:flex-row-reverse gap-10 my-16">
-            <div class="w-full lg:w-auto flex justify-center">
-                <img
-                    class="w-full max-w-[640px] h-auto"
-                    src="https://www.gstatic.com/youtube/img/promos/growth/music_premium_lp2_large_feature_move_to_rhythm_dark_640x200.webp"
-                    alt=""
-                />
-            </div>
-
-            <div class="flex-1 flex flex-col justify-center">
-                <div class="mx-4 md:mx-12">
-                    <div class="mt-4">
-                        <span class="font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-4xl">
-                            나만의 리듬에 맞춰 즐기기
-                        </span>
+<body>
+    <!-- 사이드바 영역 -->
+    <div class="w-60 h-[1052px] bg-black fixed">
+        <div class="h-full">
+            <div class="pt-2">
+                <!-- 사이드바 컨텐츠 -->
+                <div class="flex flex-col h-full">
+                    <!-- 홈 둘러보기 보관함 -->
+                    <div class="box-border inline-block px-2 w-full shrink-0 max-h-full">
+                        <div class="max-h-full overflow-auto">
+                            <div class="text-white text-xl bg-[rgba(255,255,255,.1)] hover:bg-[rgba(255,255,255,0.2)] font-medium inline-block relative w-full h-12 rounded-lg items-center justify-center">
+                                <div class="px-4 whitespace-nowrap rounded-lg cursor-pointer flex flex-row items-center text-base font-normal h-12">
+                                    <div class="mr-5 inline-flex items-center relative align-middle">
+                                        <span class="flex items-center justify-center w-full h-full cursor-pointer">
+                                            <div class="block"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="m11.485 2.143-8 4.8-2 1.2a1 1 0 001.03 1.714L3 9.567V20a2 2 0 002 2h5v-8h4v8h5a2 2 0 002-2V9.567l.485.29a1 1 0 001.03-1.714l-2-1.2-8-4.8a1 1 0 00-1.03 0Z"></path></svg></div>
+                                        </span>
+                                    </div>
+                                    <div class="font-medium">홈</div>
+                                </div>
+                            </div>
+                            <div class="text-white text-xl hover:bg-[rgba(255,255,255,0.2)] font-medium inline-block relative w-full h-12 rounded-lg items-center justify-center">
+                                <div class="px-4 whitespace-nowrap rounded-lg cursor-pointer flex flex-row items-center text-base font-normal h-12">
+                                    <div class="mr-5 inline-flex items-center relative align-middle">
+                                        <span class="flex items-center justify-center w-full h-full cursor-pointer">
+                                            <div class="block"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 110 18.001A9 9 0 0112 3Zm3.73 2.775L9.028 7.604a2 2 0 00-1.405 1.412l-1.811 6.76a2 2 0 002.458 2.448l6.701-1.828a2 2 0 001.406-1.412l1.812-6.761a2.001 2.001 0 00-2.459-2.448ZM9.555 9.533l6.702-1.828-1.812 6.762-6.702 1.826 1.812-6.76Zm1.238 2.143a1.25 1.25 0 102.415.647 1.25 1.25 0 00-2.415-.647Z"></path></svg></div>
+                                        </span>
+                                    </div>
+                                    <div class="font-medium">둘러보기</div>
+                                </div>
+                            </div>
+                            <div class="text-white text-xl hover:bg-[rgba(255,255,255,0.2)] font-medium inline-block relative w-full h-12 rounded-lg items-center justify-center">
+                                <div class="px-4 whitespace-nowrap rounded-lg cursor-pointer flex flex-row items-center text-base font-normal h-12">
+                                    <div class="mr-5 inline-flex items-center relative align-middle">
+                                        <span class="flex items-center justify-center w-full h-full cursor-pointer">
+                                            <div class="block"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M19 2H5a2 2 0 00-2 2v16.887c0 1.266 1.382 2.048 2.469 1.399L12 18.366l6.531 3.919c1.087.652 2.469-.131 2.469-1.397V4a2 2 0 00-2-2ZM5 20.233V4h14v16.233l-6.485-3.89-.515-.309-.515.309L5 20.233Z"></path></svg></div>
+                                        </span>
+                                    </div>
+                                    <div class="font-medium">보관함</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-solid border-t-[rgba(255,255,255,0.15)] my-6 mx-auto w-48">
+                        </div>
                     </div>
-                    <div class="mt-4">
-                        <span class="text-[#AAAAAA] leading-relaxed text-base sm:text-lg">
-                            내가 좋아하는 음악을 기준으로 생성된 믹스를 듣고 분위기나 상황에 맞게
-                            선별된 수천 개의 재생목록을 탐색해 보세요.
-                        </span>
+                    <!-- 새 재생목록 버튼 재생목록 -->
+                    <div class="px-1 shrink min-h-0 flex flex-col">
+                        <div class="flex flex-col mb-4 shrink-0 px-4 justify-center">
+                            <div class="w-full inline-block">
+                                <div class="flex">
+                                    <button class="text-[#f1f1f1] hover:bg-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.1)] px-4 h-9 rounded-[18px] text-sm font-medium border-none box-border cursor-pointer outline-0 decoration-0 flex flex-1 flex-row items-center justify-center">
+                                        <div class="mr-1.5 -ml-1.5">
+                                            <span class="w-6 h-6 inline-flex items-center justify-center align-middle relative">
+                                                <span class="flex items-center justify-center w-full h-full">
+                                                    <div><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M12 3a1 1 0 00-1 1v7H4a1 1 0 000 2h7v7a1 1 0 002 0v-7h7a1 1 0 000-2h-7V4a1 1 0 00-1-1Z"></path></svg></div>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="text-ellipsis overflow-hidden">
+                                            <span class="whitespace-nowrap font-semibold">새 재생목록</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Second Row -->
-        <div class="flex flex-col md:flex-col lg:flex-row gap-10 my-16">
-            <div class="w-full lg:w-auto flex justify-center">
-                <img
-                    class="w-full max-w-[640px] h-auto"
-                    src="https://www.gstatic.com/youtube/img/promos/growth/music_premium_lp2_large_feature_custom_listening_dark_640x592.webp"
-                    alt=""
-                />
-            </div>
-
-            <div class="flex flex-col flex-1 justify-center">
-                <div class="mx-4 md:mx-12">
-                    <div class="mt-4">
-                        <span class="font-bold text-white text-2xl sm:text-3xl md:text-4xl lg:text-4xl">
-                            나만을 위한 감상 환경 맞춤설정
-                        </span>
-                    </div>
-                    <div class="mt-4">
-                        <span class="text-[#AAAAAA] leading-relaxed text-base sm:text-lg">
-                            좋아하는 아티스트를 조합하여 내게 꼭 맞는 음악 감상 환경을 만드세요.
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-    
-    <div>
-        <div class="box container mx-auto p-6 w-full max-w-6xl min-h-[400px] rounded-2xl mb-20">
-            <div class="row">
-                <h2 class="text-slate-50 font-black text-5xl my-5">궁금한 점이 있으면 문의해 주세요</h2>
-            </div>
-            <div class="row flex-box">
-                <p class="text-slate-50 font-bold py-2">백그라운드에서 동영상과 음악을 재생하려면 어떻게 해야 하나요?</p>
-            <label for="arrowbtn" class="arrow ml-auto">✅</label>
-            </div> 
-        <input type="checkbox" id="arrowbtn">
-        <div class="div text-slate-300 my-2" >YouTube Music Premium 요금제를 이용하면 YouTube Music 앱에 백그라운드 재생이 기본적으로 사용 설정됩니다. 따라서 음악을 듣거나 뮤직비디오를 시청하면서 화면을 닫거나 앱을 종료해도 일시중지하기 전까지 음악이 백그라운드에서 계속 재생됩니다. 언제든지 설정에서 백그라운드 재생을 사용 중지할 수 있습니다.
-        </div>
-        <div class="bg-slate-500 w-full h-px my-4"></div>
-        <div class="row flex-box">
-                <p class="text-slate-50 font-bold py-2" >어떤 제품, 서비스, 기기에서 YouTube Music Premium이 지원되나요?</p>
-            <label for="arrowbtn2" class="arrow ml-auto">✅</label>
-            </div> 
-        <input type="checkbox" id="arrowbtn2">
-        <div class="div2 text-slate-300 my-2" >YouTube Music 앱은 스마트폰, 노트북, 태블릿, 스마트 TV와 같은 기기에서 지원됩니다. <a href="https://support.google.com/youtubemusic/answer/9231765" class="text-blue-500 hover:underline">호환 제품 및 서비스 목록</a>에서 최신 정보를 확인하고 그 밖의 기기에 대해 자세히 알아보세요.
-        </div>
-        <div class="bg-slate-500 w-full h-px my-4"></div>
-        <div class="row flex-box">
-                <p class="text-slate-50 font-bold py-2" >구독을 취소하려면 어떻게 해야 하나요?</p>
-            <label for="arrowbtn3" class="arrow ml-auto">✅</label>
-            </div> 
-        <input type="checkbox" id="arrowbtn3">
-        <div class="div3 text-slate-300 my-2" ><a href="https://www.youtube.com/paid_memberships" class="text-blue-500 hover:underline">유료 멤버십</a> 페이지로 이동하여 멤버십을 취소하세요. 언제든지 YouTube Music Premium을 다시 이용할 수 있습니다.
-        </div>
-        <div class="bg-slate-500 w-full h-px my-4"></div>
-        <div class="row">
-            <p class="text-slate-50 font-bold py-2">다른 궁금한 점이 있나요? <br> <a href="https://support.google.com/youtube/go/red_help" class="hover:underline text-blue-500">YouTube 고객센터</a>를 방문하세요.</p>
-        </div>
-        </div>
-    </div>
-        <!-- <div class="w-full bgcolor"></div> -->
-    </div>
+    <!-- 사이드바 영역 끝 -->
 </body>
 </html>
